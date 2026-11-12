@@ -1,0 +1,271 @@
+/* ---------- Global styles ---------- */
+
+* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #59434A;
+    --lavender: #A66B75;
+    --light: #F8F1ED;
+    --text: #59434A;
+    --white: #FFFFFF;
+    --pink: #D9A5A5;
+    --blue: #F1DDDA;
+    --red: #FFFFFF;
+    --purple: #A66B75;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: var(--pink);
+}
+
+main {
+    min-height: 70vh;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 8%;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #F8F1ED, #F1DDDA);
+}
+
+.hero-content {
+    max-width: 560px;
+}
+
+.eyebrow {
+    color: var(--lavender);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin: 12px 0;
+    color: var(--navy);
+}
+
+.hero-content h1 span {
+    color: var(--lavender);
+}
+
+.hero-content h2 {
+    color: var(--navy);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--lavender);
+    color: var(--white);
+    padding: 12px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.profile-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    color: var(--navy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    border: 8px solid var(--white);
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.container section {
+    margin-bottom: 35px;
+}
+
+.container h1,
+.container h2 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(89, 67, 74, 0.08);
+}
+
+.card h3 {
+    color: var(--lavender);
+    margin-bottom: 10px;
+}
+
+.interest-list {
+    margin-left: 25px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.skills span {
+    background-color: var(--lavender);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.contact-form {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--pink);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--text);
+}
+
+.contact-form button {
+    background-color: var(--lavender);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: var(--navy);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: var(--lavender);
+}
+
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Responsive layout for tablets and phones */
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
